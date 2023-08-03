@@ -1,20 +1,26 @@
-'use strict'
+'use strict';
 const form = document.getElementById('form');
-const pokeInfoDisplay = document.getElementById('pokeInfoDisplay'); 
 const pokeImg = document.getElementById('pokeImg');
+const pokeName = document.getElementById('pokeName');
+const urlBase = 'https://pokeapi.co/api/v2/pokemon/';
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const pokeName = document.getElementById('pokeName');
-    const url = `https://pokeapi.co/api/v2/pokemon/${pokeName.value}`;
-    fetchPokemon(url);
-    
-
+    fetchPokemon(generateURL(urlBase, pokeName.value));
 });
 
-async function fetchPokemon(url){
+window.addEventListener('load', (e) => {
+    e.preventDefault();
+    fetchPokemon(generateURL(urlBase, 'pikachu'));
+});
+
+function generateURL(base, parameter) {
+    return `${base}${parameter}`;
+};
+
+async function fetchPokemon(url) {
     const response = await fetch(url);
     const responseJSON = await response.json();
     pokeImg.src = responseJSON.sprites.other["official-artwork"].front_default;
     pokeImg.classList.toggle("hidden");
-}
+};

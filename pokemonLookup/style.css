@@ -1,0 +1,45 @@
+body {
+    border: 0;
+    margin: 0;
+}
+
+div {
+    width: 100vw;
+    margin: 0;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    vertical-align:middle;
+}
+
+#top_red_div {
+    background-color: red;
+    height: 66vh;
+    border-bottom: 2vh;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bottom_white_div {
+    background-color: white;
+    height: 33vh;
+}
+
+#pokeImg {
+    width: 300px;
+    height: 300px;
+    border: 20px;
+    border-color: black;
+    border-style: solid;
+}
+
+.hidden {
+    display: hidden;
+}
