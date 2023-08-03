@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <title>Bragg's Law Angle Converter</title>
+    <script async src="script.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class = "lambda_select" id="input_lambda_select">
+        <p>Input Lambda λ</p>
+        <form class="lambda_form" id="input_lambda_form">
+            <input type="radio" id="cu "name="copper" value="cu">
+            <label for="cu">Copper/Cu</label>
+            <input type="radio" id="mo "name="molbydenum" value="mo">
+            <label for="mo">Molybdenum/Mo</label>
+            <input type="radio" id="co "name="cobalt" value="co">
+            <label for="co">Cobalt/Co</label>
+            <input type="radio" id="cr "name="chromium" value="cr">
+            <label for="cr">Chromium/Cr</label>
+            <input type="radio" id="ag "name="silver" value="ag">
+            <label for="ag">Silver/Ag</label>
+            <input type="radio" id="fe "name="iron" value="fe">
+            <label for="fe">Iron/Fe</label>
+    </div>
+
+    <div class = "lambda_select" id="output_lambda_select">
+        <p>Output Lambda λ</p>
+        <form class="lambda_form" id="output_lambda_form">
+            <input type="radio" id="cu "name="copper" value="cu">
+            <label for="cu">Copper/Cu</label>
+            <input type="radio" id="mo "name="molbydenum" value="mo">
+            <label for="mo">Molybdenum/Mo</label>
+            <input type="radio" id="co "name="cobalt" value="co">
+            <label for="co">Cobalt/Co</label>
+            <input type="radio" id="cr "name="chromium" value="cr">
+            <label for="cr">Chromium/Cr</label>
+            <input type="radio" id="ag "name="silver" value="ag">
+            <label for="ag">Silver/Ag</label>
+            <input type="radio" id="fe "name="iron" value="fe">
+            <label for="fe">Iron/Fe</label>
+    </div>
+
+    <div class = "in_theta" id = "in_theta">
+        <label for="in_theta_text">In Angle 𝛳</label>
+        <input type="number" id="in_theta_text" step=any>
+    </div>
+
+    <div class = "out_theta" id = "out_theta">
+        <p id="out_theta_label">Output Angle 𝛳:</p>
+        <p id="out_theta_text">45°</p>
+    </div>
+    
+        
+
+        <!-- ["Copper/Cu", "Molybdenum/Mo","Cobalt/Co","Chromium/Cr","Silver/Ag","Iron/Fe"] -->
+    </form>
+</body>
